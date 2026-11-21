@@ -45,3 +45,5 @@ inspect_book.py
 convert_svgs.py
 scratch/
 book-portfolio-website/
+
+.vercel
