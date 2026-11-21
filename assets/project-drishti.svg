@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgDri" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eef6ff"/>
+      <stop offset="50%" stop-color="#eef6ff"/>
+      <stop offset="100%" stop-color="#eef6ff"/>
+    </linearGradient>
+    <linearGradient id="emeraldTeal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#dceeff"/>
+      <stop offset="100%" stop-color="#eef6ff"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="340" fill="url(#bgDri)"/>
+
+  <!-- Agri neural grid -->
+  <g stroke="rgba(16, 185, 129, 0.12)" stroke-width="1">
+    <circle cx="300" cy="170" r="140" fill="none" stroke-dasharray="6 6"/>
+    <circle cx="300" cy="170" r="90" fill="none"/>
+    <circle cx="300" cy="170" r="40" fill="rgba(16, 185, 129, 0.08)"/>
+  </g>
+
+  <!-- Left: Computer Vision Crop Quality Inspection -->
+  <g transform="translate(60, 60)">
+    <rect x="0" y="0" width="220" height="200" rx="10" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(16, 185, 129, 0.4)" stroke-width="1.5"/>
+    <text x="110" y="24" fill="#34d399" font-family="'Inter', sans-serif" font-weight="700" font-size="11" text-anchor="middle">AI VISION CROP INSPECTION</text>
+
+    <!-- Crop Bounding Box -->
+    <rect x="35" y="45" width="150" height="110" rx="8" fill="rgba(16, 185, 129, 0.08)" stroke="#dceeff" stroke-width="2" stroke-dasharray="6 4"/>
+    
+    <!-- Plant / Leaf Icon in center -->
+    <path d="M 110 65 C 80 80 80 120 110 135 C 140 120 140 80 110 65 Z" fill="none" stroke="#34d399" stroke-width="2.5"/>
+    <line x1="110" y1="75" x2="110" y2="135" stroke="#34d399" stroke-width="1.5"/>
+
+    <!-- Defect Detection Point -->
+    <circle cx="95" cy="100" r="5" fill="#dceeff"/>
+    <circle cx="95" cy="100" r="12" fill="none" stroke="#dceeff" stroke-width="1.5" opacity="0.6"/>
+
+    <text x="110" y="172" fill="#6ee7b7" font-family="'Fira Code', monospace" font-size="9" text-anchor="middle">GRADE: A+ [QUALITY 98.7%]</text>
+    <text x="110" y="188" fill="#94a3b8" font-family="'Fira Code', monospace" font-size="8" text-anchor="middle">DEFECT INDEX: 0.013 (PRIME)</text>
+  </g>
+
+  <!-- Right: Digital Quality Passport & QR Verification -->
+  <g transform="translate(320, 60)">
+    <rect x="0" y="0" width="220" height="200" rx="10" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(6, 182, 212, 0.4)" stroke-width="1.5"/>
+    <text x="110" y="24" fill="#22d3ee" font-family="'Inter', sans-serif" font-weight="700" font-size="11" text-anchor="middle">DIGITAL QUALITY PASSPORT</text>
+
+    <!-- QR Code Graphic -->
+    <g transform="translate(40, 45)">
+      <rect x="0" y="0" width="60" height="60" rx="4" fill="#ffffff"/>
+      <!-- QR Blocks -->
+      <rect x="6" y="6" width="18" height="18" fill="#eef6ff"/>
+      <rect x="10" y="10" width="10" height="10" fill="#ffffff"/>
+      <rect x="36" y="6" width="18" height="18" fill="#eef6ff"/>
+      <rect x="40" y="10" width="10" height="10" fill="#ffffff"/>
+      <rect x="6" y="36" width="18" height="18" fill="#eef6ff"/>
+      <rect x="10" y="40" width="10" height="10" fill="#ffffff"/>
+      <rect x="30" y="32" width="6" height="6" fill="#eef6ff"/>
+      <rect x="42" y="38" width="8" height="8" fill="#eef6ff"/>
+      <rect x="30" y="46" width="6" height="8" fill="#eef6ff"/>
+    </g>
+
+    <text x="155" y="65" fill="#67e8f9" font-family="'Fira Code', monospace" font-size="9">QR TRACEABLE</text>
+    <text x="155" y="80" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="8">Blockchain</text>
+    <text x="155" y="93" fill="#94a3b8" font-family="'Inter', sans-serif" font-size="8">Validated</text>
+
+    <!-- Pricing Card -->
+    <rect x="20" y="120" width="180" height="32" rx="4" fill="#1e293b" stroke="#eef6ff" stroke-width="1"/>
+    <text x="30" y="140" fill="#22d3ee" font-family="'Inter', sans-serif" font-weight="600" font-size="10">Fair Price: ₹48.50 / kg</text>
+
+    <rect x="20" y="158" width="180" height="26" rx="4" fill="rgba(16, 185, 129, 0.15)"/>
+    <text x="110" y="174" fill="#6ee7b7" font-family="'Fira Code', monospace" font-size="9" text-anchor="middle">STATUS: MARKET CERTIFIED</text>
+  </g>
+
+  <!-- Bottom Badge -->
+  <rect x="150" y="280" width="300" height="34" rx="17" fill="rgba(16, 185, 129, 0.15)" stroke="#dceeff" stroke-width="1.5"/>
+  <text x="300" y="302" fill="#34d399" font-family="'Inter', sans-serif" font-weight="700" font-size="12" text-anchor="middle">DRISHTI 360 • FARM-TO-MARKET AGRI AI</text>
+</svg>

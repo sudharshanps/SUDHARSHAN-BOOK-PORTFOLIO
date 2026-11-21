@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 340" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eef6ff"/>
+      <stop offset="50%" stop-color="#eef6ff"/>
+      <stop offset="100%" stop-color="#eef6ff"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eef6ff"/>
+      <stop offset="100%" stop-color="#4facfe"/>
+    </linearGradient>
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="rgba(0, 171, 240, 0.4)"/>
+      <stop offset="100%" stop-color="rgba(0, 110, 154, 0.1)"/>
+    </linearGradient>
+    <radialGradient id="radarGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(0, 242, 254, 0.3)"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="600" height="340" fill="url(#bg1)"/>
+
+  <!-- Grid Pattern -->
+  <g stroke="rgba(0, 171, 240, 0.1)" stroke-width="1">
+    <line x1="0" y1="60" x2="600" y2="60"/>
+    <line x1="0" y1="120" x2="600" y2="120"/>
+    <line x1="0" y1="180" x2="600" y2="180"/>
+    <line x1="0" y1="240" x2="600" y2="240"/>
+    <line x1="0" y1="300" x2="600" y2="300"/>
+    <line x1="100" y1="0" x2="100" y2="340"/>
+    <line x1="200" y1="0" x2="200" y2="340"/>
+    <line x1="300" y1="0" x2="300" y2="340"/>
+    <line x1="400" y1="0" x2="400" y2="340"/>
+    <line x1="500" y1="0" x2="500" y2="340"/>
+  </g>
+
+  <!-- Radar circles -->
+  <circle cx="300" cy="170" r="130" fill="none" stroke="rgba(0, 171, 240, 0.2)" stroke-width="1.5" stroke-dasharray="6 6"/>
+  <circle cx="300" cy="170" r="90" fill="none" stroke="rgba(0, 171, 240, 0.3)" stroke-width="1.5"/>
+  <circle cx="300" cy="170" r="50" fill="url(#radarGlow)"/>
+
+  <!-- Radar sweep line -->
+  <line x1="300" y1="170" x2="420" y2="80" stroke="#eef6ff" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Shield Shape in Center -->
+  <path d="M 300 95 L 360 120 V 175 C 360 215 300 245 300 245 C 300 245 240 215 240 175 V 120 Z" fill="url(#shieldGrad)" stroke="#eef6ff" stroke-width="2.5"/>
+  
+  <!-- Lock / Threat Core -->
+  <rect x="285" y="155" width="30" height="24" rx="4" fill="#eef6ff"/>
+  <path d="M 291 155 V 146 A 9 9 0 0 1 309 146 V 155" fill="none" stroke="#eef6ff" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="300" cy="165" r="3" fill="#eef6ff"/>
+
+  <!-- Detected Threat Node Markers -->
+  <circle cx="160" cy="100" r="6" fill="#ef4444"/>
+  <circle cx="160" cy="100" r="14" fill="none" stroke="#ef4444" stroke-width="1.5" opacity="0.6"/>
+  <text x="175" y="105" fill="#f87171" font-family="'Fira Code', monospace" font-size="11">THREAT: PHISHING URL [98.4%]</text>
+
+  <circle cx="450" cy="230" r="5" fill="#dceeff"/>
+  <text x="465" y="234" fill="#34d399" font-family="'Fira Code', monospace" font-size="11">STATUS: SECURE [FASTAPI]</text>
+
+  <!-- Binary data streams -->
+  <text x="40" y="280" fill="rgba(0, 171, 240, 0.35)" font-family="'Fira Code', monospace" font-size="10">01000001 01001001 00101101 01010011 01000101 01000011</text>
+  <text x="360" y="45" fill="rgba(0, 171, 240, 0.35)" font-family="'Fira Code', monospace" font-size="10">MODEL: SCIKIT-LEARN / DOCKERIZED</text>
+
+  <!-- Platform Title Badge -->
+  <rect x="180" y="275" width="240" height="32" rx="16" fill="rgba(0, 171, 240, 0.15)" stroke="#eef6ff" stroke-width="1"/>
+  <text x="300" y="296" fill="#eef6ff" font-family="'Inter', sans-serif" font-weight="600" font-size="12" text-anchor="middle">AI CYBERSECURITY RADAR</text>
+</svg>

@@ -1,0 +1,1509 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sudharshan P S | Software Engineer &amp; Cybersecurity Specialist</title>
+    <meta
+      name="description"
+      content="Interactive 3D Codex Portfolio of Sudharshan P S. Aspiring Software Engineer, Cybersecurity & AI Developer specializing in secure, intelligent, and scalable digital solutions."
+    />
+    <meta name="author" content="Sudharshan P S" />
+    <meta
+      name="keywords"
+      content="Sudharshan P S, Software Engineer, Cybersecurity, AI Developer, Machine Learning, Full-Stack Developer, Computer Vision, SKCET, CredSense AI, Drishti 360, NidhiVizh, TaskGuard, SudharshanTech, Zentriq"
+    />
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Sudharshan P S | Software Engineer &amp; Cybersecurity Specialist" />
+    <meta
+      property="og:description"
+      content="Building Secure, Intelligent &amp; Innovative Digital Solutions. Explore interactive 3D codex, live cybersecurity lab, and verified projects."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="profile.jpg" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+    <!-- BoxIcons CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet with Cache Buster -->
+    <link rel="stylesheet" href="style.css?v=4.0" />
+  </head>
+  <body>
+    <!-- Interactive Background Particle Canvas -->
+    <canvas id="bgCanvas"></canvas>
+
+    <!-- Dynamic Cursor Spotlight & Interactive Mouse Pointer -->
+    <div class="dynamic-spotlight" id="spotlight"></div>
+    <div class="custom-cursor-dot" id="cursorDot"></div>
+    <div class="custom-cursor-ring" id="cursorRing"></div>
+
+    <!-- Ambient Glowing Backdrop -->
+    <div class="ambient-glow ambient-glow-1"></div>
+    <div class="ambient-glow ambient-glow-2"></div>
+
+    <!-- Floating Top-Left Brand Crest (Return to Cover) -->
+    <aside class="book-brand-badge" id="bookBrandBadge" title="Return to Cover / Profile">
+      <div class="brand-crest">S</div>
+      <div class="brand-info">
+        <span class="brand-title">SUDHARSHAN P S</span>
+        <span class="brand-subtitle">Interactive Digital Codex</span>
+      </div>
+    </aside>
+
+    <!-- Floating Top-Right Utility Dock -->
+    <aside class="book-utility-dock" id="bookUtilityDock" aria-label="Book Utility Controls">
+      <button class="dock-btn" id="dockSoundBtn" title="Toggle Page Flip Sound">
+        <i class="bx bx-volume-full" id="dockSoundIcon"></i>
+        <span class="dock-btn-text" id="dockSoundLabel">Sound ON</span>
+      </button>
+
+      <button class="dock-btn" id="dockFullscreenBtn" title="Toggle Fullscreen Mode">
+        <i class="bx bx-fullscreen" id="dockFullscreenIcon"></i>
+        <span class="dock-btn-text" id="dockFullscreenLabel">Fullscreen</span>
+      </button>
+
+      <a href="Sudharshan_PS_Resume.pdf" download="Sudharshan_PS_Resume.pdf" class="dock-btn dock-btn-cta" id="dockResumeBtn" title="Download Official Resume PDF">
+        <i class="bx bx-download"></i>
+        <span class="dock-btn-text">Resume</span>
+      </a>
+
+      <button class="dock-btn" id="dockTerminalBtn" title="Open Interactive Developer Terminal [~]">
+        <i class="bx bx-terminal"></i>
+        <span class="dock-btn-text">Terminal</span>
+      </button>
+
+      <button class="dock-btn" id="dockAiBtn" title="Launch SUDHARSHAN.AI Personal Assistant">
+        <i class="bx bx-bot"></i>
+        <span class="dock-btn-text">SUDHARSHAN.AI</span>
+      </button>
+    </aside>
+
+    <!-- Side Navigation Chevrons (Hover / Click outer edges to turn pages) -->
+    <button class="book-side-nav prev" id="bookSidePrev" title="Previous Page (Left Arrow)" aria-label="Previous Page">
+      <i class="bx bx-chevron-left"></i>
+    </button>
+    <button class="book-side-nav next" id="bookSideNext" title="Next Page (Right Arrow)" aria-label="Next Page">
+      <i class="bx bx-chevron-right"></i>
+    </button>
+
+    <!-- Main Full-Screen 3D Book Container -->
+    <main class="wrapper" id="bookWrapper">
+      <!-- Realistic Hardcover Outer Trim & Paper Stack Shadow -->
+      <div class="book-hardcover-casing" id="bookHardcoverCasing"></div>
+      <div class="book-stacked-edges left"></div>
+      <div class="book-stacked-edges right"></div>
+      <div class="book-stacked-edges bottom"></div>
+
+      <div class="cover cover-left"></div>
+      <div class="cover cover-right"></div>
+
+      <div class="book" id="bookContainer">
+        <!-- Physical Center Spine Crease & Valley Shadow -->
+        <div class="book-spine-crease"></div>
+        <!-- ===================================================
+             PAGE 0: STATIONARY LEFT COVER (HERO / PROFILE)
+             =================================================== -->
+        <div class="book-page page-left" id="pageHero">
+          <div class="profile-page">
+            <div class="profile-img-wrap">
+              <div class="orbital-ring orbital-ring-1"></div>
+              <div class="orbital-ring orbital-ring-2"></div>
+              <div class="orbital-ring orbital-ring-3"></div>
+              <img src="profile.jpg" alt="Sudharshan P S" class="profile-img" />
+            </div>
+
+            <div class="profile-status-pill">
+              <span class="status-indicator-dot"></span>
+              CYBER DEFENSE &amp; AI ENGINE ACTIVE
+            </div>
+
+            <h1 class="profile-name">Hi, I'm Sudharshan P S</h1>
+
+            <div class="typing-container">
+              <span class="typing-text" id="typingText"></span>
+              <span class="typing-cursor"></span>
+            </div>
+
+            <p class="profile-tagline">"Building Secure, Intelligent &amp; Innovative Digital Solutions."</p>
+
+            <p class="profile-desc">
+              Computer Science &amp; Engineering student specializing in Cyber Security at Sri Krishna College of Engineering and Technology, Coimbatore. I engineer intelligent, secure, and production-ready applications combining AI/ML, computer vision, cybersecurity threat defense, and full-stack architecture.
+            </p>
+
+            <div class="profile-actions">
+              <button class="btn btn-primary" id="heroViewProjectsBtn">
+                <i class="bx bx-code-alt"></i> View My Projects
+              </button>
+              <a href="Sudharshan_PS_Resume.pdf" download="Sudharshan_PS_Resume.pdf" class="btn btn-secondary" id="heroDownloadResumeBtn">
+                <i class="bx bx-download"></i> Download Resume
+              </a>
+              <button class="btn btn-secondary" id="heroContactBtn">
+                <i class="bx bx-envelope"></i> Contact Me
+              </button>
+            </div>
+
+            <div class="social-links">
+              <a href="https://github.com/sudharshanps" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub Profile">
+                <i class="bx bxl-github"></i>
+              </a>
+              <a href="https://linkedin.com/in/sudharshan-ps-5a6b9a325" target="_blank" rel="noopener noreferrer" class="social-icon" title="LinkedIn Profile">
+                <i class="bx bxl-linkedin"></i>
+              </a>
+              <a href="mailto:sudharshanthemagnet@gmail.com" class="social-icon" title="Send Email">
+                <i class="bx bx-envelope"></i>
+              </a>
+              <a href="tel:+919791495418" class="social-icon" title="Call +91 9791495418">
+                <i class="bx bx-phone"></i>
+              </a>
+              <a href="https://sudharshan-tech.onrender.com/" target="_blank" rel="noopener noreferrer" class="social-icon" title="SudharshanTech Platform">
+                <i class="bx bx-globe"></i>
+              </a>
+            </div>
+          </div>
+          <span class="page-number">00 // CODEX PROFILE</span>
+        </div>
+
+        <!-- ===================================================
+             LEAF 1: FRONT = PAGE 1 (ABOUT ME) | BACK = PAGE 2 (EDUCATION)
+             =================================================== -->
+        <div class="book-page page-right turn" id="pageLeaf1">
+          <!-- FRONT: Page 1 (About Me – Personality Experience) -->
+          <div class="page-front" id="pageAbout">
+            <h2 class="title"><i class="bx bx-user-pin"></i> About Me</h2>
+            <p class="section-subtitle">Engineering resilient digital architectures where security meets intelligence.</p>
+
+            <p class="about-intro-text">
+              I am pursuing my <strong>B.E. in Computer Science and Engineering (Cyber Security)</strong> at Sri Krishna College of Engineering and Technology, maintaining an academic CGPA of <strong>8.5 / 10</strong>. My technical focus bridges artificial intelligence with defensive cybersecurity engineering, transforming theoretical research into high-throughput production tools.
+            </p>
+
+            <!-- Verified Statistics Grid -->
+            <div class="stats-grid">
+              <div class="stat-card card-tilt">
+                <div class="stat-number">8.5<span style="font-size: 0.85rem; color: var(--text-cyan);">/10</span></div>
+                <div class="stat-label">Cumulative CGPA</div>
+              </div>
+              <div class="stat-card card-tilt">
+                <div class="stat-number">10<span style="font-size: 0.85rem; color: var(--royal-blue);">+</span></div>
+                <div class="stat-label">Featured Projects</div>
+              </div>
+              <div class="stat-card card-tilt">
+                <div class="stat-number">4<i class="bx bx-briefcase-alt"></i></div>
+                <div class="stat-label">Internship Experiences</div>
+              </div>
+              <div class="stat-card card-tilt">
+                <div class="stat-number">Top 50<i class="bx bx-medal" style="color: var(--royal-blue);"></i></div>
+                <div class="stat-label">National AI Hackathon</div>
+              </div>
+            </div>
+
+            <!-- Development Philosophy -->
+            <div class="philosophy-card card-tilt">
+              <div class="philosophy-title">
+                <i class="bx bx-shield-quarter"></i> Engineering Philosophy: Defense in Depth
+              </div>
+              <p class="philosophy-text">
+                "Security is not an afterthought or an external layer — it is an architectural prerequisite. I design systems with zero-trust principles, least privilege access, auditable transaction trails, and proactive threat modeling from the very first commit."
+              </p>
+            </div>
+
+            <!-- Core Competencies -->
+            <div class="competencies-box">
+              <div class="competencies-title">Core Competency Matrix</div>
+              <div class="competency-tags">
+                <span class="comp-tag"><i class="bx bx-check-shield"></i> Threat Detection &amp; SAST</span>
+                <span class="comp-tag"><i class="bx bx-camera"></i> Computer Vision &amp; MediaPipe</span>
+                <span class="comp-tag"><i class="bx bx-layer"></i> Full-Stack Architecture</span>
+                <span class="comp-tag"><i class="bx bx-chip"></i> IoT &amp; Microcontrollers</span>
+                <span class="comp-tag"><i class="bx bx-data"></i> Relational Database Design</span>
+                <span class="comp-tag"><i class="bx bx-git-branch"></i> Git CI/CD &amp; DevSecOps</span>
+              </div>
+            </div>
+
+            <button class="nextprev-btn" data-turn-page="1">
+              <span>Education &amp; Exp</span> <i class="bx bx-chevron-right"></i>
+            </button>
+            <span class="page-number">01 // PHILOSOPHY</span>
+          </div>
+
+          <!-- BACK: Page 2 (Education & Academic Milestones) -->
+          <div class="page-back" id="pageEducation">
+            <h2 class="title"><i class="bx bx-graduation"></i> Academic Foundation</h2>
+            <p class="section-subtitle">Rigorous computer science curriculum with deep cybersecurity specialization.</p>
+
+            <div class="edu-institution-card card-tilt">
+              <h3 class="edu-degree">Bachelor of Engineering in Computer Science &amp; Engineering (Cyber Security)</h3>
+              <p class="edu-college">Sri Krishna College of Engineering and Technology (SKCET), Coimbatore</p>
+              <div class="edu-meta">
+                <span><i class="bx bx-calendar"></i> 2024 – 2028 (Autonomous, NAAC A++)</span>
+                <span class="edu-cgpa-pill">CGPA: 8.5 / 10.0</span>
+              </div>
+            </div>
+
+            <div class="coursework-container">
+              <div class="coursework-title">Key Core Coursework</div>
+              <div class="coursework-grid">
+                <div class="coursework-item"><i class="bx bx-code-curly"></i> Data Structures &amp; Algorithms</div>
+                <div class="coursework-item"><i class="bx bx-data"></i> Database Management (DBMS)</div>
+                <div class="coursework-item"><i class="bx bx-terminal"></i> Operating Systems &amp; Linux</div>
+                <div class="coursework-item"><i class="bx bx-network-chart"></i> Computer Networks &amp; TCP/IP</div>
+                <div class="coursework-item"><i class="bx bx-cube"></i> Object-Oriented Programming (OOP)</div>
+                <div class="coursework-item"><i class="bx bx-shield"></i> Cybersecurity Fundamentals</div>
+                <div class="coursework-item"><i class="bx bx-brain"></i> Artificial Intelligence &amp; ML</div>
+                <div class="coursework-item"><i class="bx bx-lock-alt"></i> Cryptography &amp; Network Security</div>
+              </div>
+            </div>
+
+            <div class="academic-contributions card-tilt">
+              <div class="academic-contrib-title"><i class="bx bx-group"></i> Academic Milestones &amp; Mentorship</div>
+              <ul class="academic-contrib-list">
+                <li><strong>Technical Peer Mentor:</strong> Spearheaded peer-to-peer coding bootcamps and algorithmic problem-solving clinics for junior engineering students.</li>
+                <li><strong>Cybersecurity Club — SKCET:</strong> Active contributor driving Capture-The-Flag (CTF) practice sessions and vulnerability demonstration workshops.</li>
+              </ul>
+            </div>
+
+            <button class="nextprev-btn back" data-turn-back="1">
+              <i class="bx bx-chevron-left"></i> <span>Profile &amp; About</span>
+            </button>
+            <span class="page-number">02 // EDUCATION</span>
+          </div>
+        </div>
+
+        <!-- ===================================================
+             LEAF 2: FRONT = PAGE 3 (EXPERIENCE) | BACK = PAGE 4 (SKILLS & CONSTELLATION)
+             =================================================== -->
+        <div class="book-page page-right turn" id="pageLeaf2">
+          <!-- FRONT: Page 3 (Professional Experience Timeline) -->
+          <div class="page-front" id="pageExperience">
+            <h2 class="title"><i class="bx bx-briefcase-alt"></i> Professional Journey</h2>
+            <p class="section-subtitle">Practical industry experience across cybersecurity analysis, UI engineering, and software delivery.</p>
+
+            <div class="timeline-container">
+              <!-- Internship 1 -->
+              <div class="timeline-card card-tilt">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-role">Cybersecurity Content Intern</h3>
+                    <div class="timeline-company">XECUREONE</div>
+                  </div>
+                  <span class="timeline-period">June 2026 – July 2026 | Remote</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li>Researched emerging CVE vulnerability advisories and real-world breach telemetry to produce actionable defensive intelligence guides.</li>
+                  <li>Authored deep-dive technical education modules covering phishing attack vectors, social engineering mechanics, and OWASP Top 10 countermeasures.</li>
+                </ul>
+                <div class="timeline-tech-pills">
+                  <span class="tech-pill-sm">CVE Research</span>
+                  <span class="tech-pill-sm">OWASP Top 10</span>
+                  <span class="tech-pill-sm">Threat Intelligence</span>
+                  <span class="tech-pill-sm">Defensive Security</span>
+                </div>
+              </div>
+
+              <!-- Internship 2 -->
+              <div class="timeline-card card-tilt">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-role">UI/UX Design Intern</h3>
+                    <div class="timeline-company">Technico Laboratory Products Pvt. Ltd.</div>
+                  </div>
+                  <span class="timeline-period">May 2026 – June 2026 | Chennai</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li>Designed responsive, customer-centric product catalogs and technical specification interfaces for precision scientific instrumentation.</li>
+                  <li>Synthesized client-facing documentation and structured business quotation frameworks supporting active sales operations.</li>
+                </ul>
+                <div class="timeline-tech-pills">
+                  <span class="tech-pill-sm">UI/UX Design</span>
+                  <span class="tech-pill-sm">Design Systems</span>
+                  <span class="tech-pill-sm">Responsive Layouts</span>
+                  <span class="tech-pill-sm">Product Portals</span>
+                </div>
+              </div>
+
+              <!-- Internship 3 -->
+              <div class="timeline-card card-tilt">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-role">UI/UX Design Intern</h3>
+                    <div class="timeline-company">Future Interns</div>
+                  </div>
+                  <span class="timeline-period">March 2026 – April 2026 | Remote</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li>Crafted 15+ high-fidelity interactive wireframes and workflow prototypes across CRM analytics and booking application products in Figma.</li>
+                  <li>Conducted iterative usability evaluations with stakeholder feedback loops to eliminate user friction points in data entry forms.</li>
+                </ul>
+                <div class="timeline-tech-pills">
+                  <span class="tech-pill-sm">Figma Prototyping</span>
+                  <span class="tech-pill-sm">Wireframing</span>
+                  <span class="tech-pill-sm">Usability Auditing</span>
+                  <span class="tech-pill-sm">CRM Architecture</span>
+                </div>
+              </div>
+
+              <!-- Internship 4 -->
+              <div class="timeline-card card-tilt">
+                <div class="timeline-header">
+                  <div>
+                    <h3 class="timeline-role">Junior Software Developer Intern</h3>
+                    <div class="timeline-company">Yuva Intern</div>
+                  </div>
+                  <span class="timeline-period">Jan 2026 – Feb 2026 | Remote</span>
+                </div>
+                <ul class="timeline-bullets">
+                  <li>Engineered and debugged modular features in Python and JavaScript applications, adhering to clean architecture patterns.</li>
+                  <li>Actively participated in Agile sprint retrospectives, continuous integration workflows, code reviews, and defensive bug remediation.</li>
+                </ul>
+                <div class="timeline-tech-pills">
+                  <span class="tech-pill-sm">Python</span>
+                  <span class="tech-pill-sm">JavaScript</span>
+                  <span class="tech-pill-sm">Agile / Scrum</span>
+                  <span class="tech-pill-sm">Code Refactoring</span>
+                </div>
+              </div>
+            </div>
+
+            <button class="nextprev-btn" data-turn-page="2">
+              <span>Skills &amp; Projects</span> <i class="bx bx-chevron-right"></i>
+            </button>
+            <span class="page-number">03 // EXPERIENCE</span>
+          </div>
+
+          <!-- BACK: Page 4 (Interactive Skill Constellation & Stack) -->
+          <div class="page-back" id="pageSkills">
+            <h2 class="title"><i class="bx bx-atom"></i> Technical Constellation</h2>
+            <p class="section-subtitle">Verified technical proficiencies organized as an interactive topological neural map.</p>
+
+            <!-- Interactive Skill Constellation Visualizer -->
+            <div class="constellation-wrapper">
+              <div class="constellation-filters">
+                <button class="constellation-pill active" data-skill-cat="all">All Domains</button>
+                <button class="constellation-pill" data-skill-cat="cyber">Cybersecurity</button>
+                <button class="constellation-pill" data-skill-cat="languages">Languages</button>
+                <button class="constellation-pill" data-skill-cat="ai">AI / Vision</button>
+                <button class="constellation-pill" data-skill-cat="fullstack">Full-Stack</button>
+                <button class="constellation-pill" data-skill-cat="devops">DevOps &amp; DB</button>
+              </div>
+
+              <canvas id="skillConstellationCanvas"></canvas>
+
+              <div class="skill-inspector-card" id="skillInspector">
+                <div class="skill-inspector-header">
+                  <span class="skill-inspector-name" id="inspSkillName">Hover or Click any Node</span>
+                  <span class="skill-inspector-cat" id="inspSkillCat">SYSTEM TOPOLOGY</span>
+                </div>
+                <p class="skill-inspector-details" id="inspSkillDetails">
+                  Explore Sudharshan's verified technological toolkit. Nodes represent verified languages, libraries, and security frameworks applied across real-world repositories.
+                </p>
+              </div>
+            </div>
+
+            <!-- Categorized Technical Stack Cards -->
+            <div class="skills-category-grid">
+              <div class="skill-cat-card card-tilt">
+                <h4 class="skill-cat-title"><i class="bx bx-code"></i> Languages</h4>
+                <div class="skill-pill-tags">
+                  <span class="skill-pill">Python</span>
+                  <span class="skill-pill">Java</span>
+                  <span class="skill-pill">C++</span>
+                  <span class="skill-pill">JavaScript</span>
+                  <span class="skill-pill">TypeScript</span>
+                  <span class="skill-pill">SQL</span>
+                </div>
+              </div>
+
+              <div class="skill-cat-card card-tilt">
+                <h4 class="skill-cat-title"><i class="bx bx-shield-quarter"></i> Cybersecurity</h4>
+                <div class="skill-pill-tags">
+                  <span class="skill-pill">Threat Analysis</span>
+                  <span class="skill-pill">OWASP Top 10</span>
+                  <span class="skill-pill">SIEM</span>
+                  <span class="skill-pill">CVE Research</span>
+                  <span class="skill-pill">Vulnerability Audit</span>
+                  <span class="skill-pill">Burp / ZAP</span>
+                </div>
+              </div>
+
+              <div class="skill-cat-card card-tilt">
+                <h4 class="skill-cat-title"><i class="bx bx-brain"></i> AI &amp; Machine Learning</h4>
+                <div class="skill-pill-tags">
+                  <span class="skill-pill">Computer Vision</span>
+                  <span class="skill-pill">OpenCV</span>
+                  <span class="skill-pill">MediaPipe</span>
+                  <span class="skill-pill">Scikit-learn</span>
+                  <span class="skill-pill">FaceMesh</span>
+                  <span class="skill-pill">Anomaly Detection</span>
+                </div>
+              </div>
+
+              <div class="skill-cat-card card-tilt">
+                <h4 class="skill-cat-title"><i class="bx bx-server"></i> Full-Stack &amp; DevOps</h4>
+                <div class="skill-pill-tags">
+                  <span class="skill-pill">React.js</span>
+                  <span class="skill-pill">Next.js</span>
+                  <span class="skill-pill">FastAPI</span>
+                  <span class="skill-pill">Spring Boot</span>
+                  <span class="skill-pill">PostgreSQL / MySQL</span>
+                  <span class="skill-pill">Docker &amp; Linux</span>
+                </div>
+              </div>
+            </div>
+
+            <button class="nextprev-btn back" data-turn-back="2">
+              <i class="bx bx-chevron-left"></i> <span>Experience Journey</span>
+            </button>
+            <span class="page-number">04 // SKILLS</span>
+          </div>
+        </div>
+
+        <!-- ===================================================
+             LEAF 3: FRONT = PAGE 5 (PROJECTS) | BACK = PAGE 6 (ENTREPRENEURSHIP & STARTUPS)
+             =================================================== -->
+        <div class="book-page page-right turn" id="pageLeaf3">
+          <!-- FRONT: Page 5 (Project Intelligence Hub) -->
+          <div class="page-front" id="pageProjects">
+            <h2 class="title"><i class="bx bx-grid-alt"></i> Project Intelligence Hub</h2>
+            <p class="section-subtitle">Real-world production platforms, AI research implementations, and security auditing tools.</p>
+
+            <!-- Search & Filters -->
+            <div class="project-hub-controls">
+              <div class="project-search-box">
+                <i class="bx bx-search"></i>
+                <input type="text" id="projectSearchInput" class="project-search-input" placeholder="Search projects by name, technology, or tag..." />
+              </div>
+              <div class="project-filter-pills">
+                <button class="proj-filter-pill active" data-filter="all">All (10)</button>
+                <button class="proj-filter-pill" data-filter="cyber">Cybersecurity</button>
+                <button class="proj-filter-pill" data-filter="ai">AI &amp; Vision</button>
+                <button class="proj-filter-pill" data-filter="enterprise">Enterprise &amp; Web</button>
+                <button class="proj-filter-pill" data-filter="iot">Systems &amp; IoT</button>
+              </div>
+            </div>
+
+            <!-- Projects Feed -->
+            <div class="projects-feed" id="projectsContainer">
+              <!-- Project 1: CredSense AI -->
+              <div class="project-card card-tilt" data-category="cyber" data-keywords="credsense git secret sast ai risk scoring render typescript react">
+                <div class="project-visual-header">
+                  <img src="assets/project-credsense.svg" alt="CredSense AI Architecture" class="project-svg-banner" />
+                  <span class="project-domain-pill">CYBERSECURITY SAST</span>
+                  <span class="project-metric-badge">LIVE ON RENDER</span>
+                </div>
+                <div class="project-content-body">
+                  <h3 class="project-title">CredSense AI — Git Secret Detection Platform</h3>
+                  <div class="project-tagline">AI-Assisted Git Secret Detection &amp; Exposure Analysis</div>
+                  <p class="project-description">
+                    Enterprise repository security scanner identifying hardcoded credentials, API keys, and private tokens across commit histories. Employs Shannon entropy analysis and AI risk verification models to calculate exposure timelines and deliver automated remediation workflows.
+                  </p>
+                  <div class="project-tech-badges">
+                    <span class="tech-badge">TypeScript</span>
+                    <span class="tech-badge">React</span>
+                    <span class="tech-badge">Node.js</span>
+                    <span class="tech-badge">Security SAST</span>
+                    <span class="tech-badge">AI Risk Scoring</span>
+                    <span class="tech-badge">Git Telemetry</span>
+                  </div>
+                  <div class="project-footer-actions">
+                    <a href="https://github.com/sudharshanps/CredSenseAI" target="_blank" rel="noopener noreferrer" class="project-action-btn repo">
+                      <i class="bx bxl-github"></i> Repository
+                    </a>
+                    <a href="https://credsense-ai.onrender.com/" target="_blank" rel="noopener noreferrer" class="project-action-btn demo">
+                      <i class="bx bx-link-external"></i> Live Demo
+                    </a>
+                    <button class="project-action-btn details open-details-btn" data-project="credsense">
+                      <i class="bx bx-detail"></i> Architecture
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 2: AI Cybersecurity Threat Detection -->
+              <div class="project-card card-tilt" data-category="cyber ai" data-keywords="cybersecurity threat detection phishing fastapi scikit-learn postgresql docker machine learning">
+                <div class="project-visual-header">
+                  <img src="assets/project-threat-detection.svg" alt="AI Threat Detection Architecture" class="project-svg-banner" />
+                  <span class="project-domain-pill">AI SECURITY</span>
+                  <span class="project-metric-badge">98.4% PRECISION</span>
+                </div>
+                <div class="project-content-body">
+                  <h3 class="project-title">AI-Powered Cybersecurity Threat Detection Platform</h3>
+                  <div class="project-tagline">Real-Time Phishing URL Defense &amp; Suspicious Activity Monitoring</div>
+                  <p class="project-description">
+                    AI-driven platform detecting phishing URLs and anomalous network telemetry in real time. Deploys an ensemble Scikit-learn classifier behind FastAPI microservices, containerized with Docker and persisting audit events to PostgreSQL.
+                  </p>
+                  <div class="project-tech-badges">
+                    <span class="tech-badge">Next.js</span>
+                    <span class="tech-badge">FastAPI</span>
+                    <span class="tech-badge">Scikit-learn</span>
+                    <span class="tech-badge">PostgreSQL</span>
+                    <span class="tech-badge">Docker</span>
+                  </div>
+                  <div class="project-footer-actions">
+                    <a href="https://github.com/sudharshanps/cyber-threat-detection" target="_blank" rel="noopener noreferrer" class="project-action-btn repo">
+                      <i class="bx bxl-github"></i> Repository
+                    </a>
+                    <button class="project-action-btn details open-details-btn" data-project="threat">
+                      <i class="bx bx-detail"></i> Architecture
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 3: DRISHTI 360 -->
+              <div class="project-card card-tilt" data-category="ai" data-keywords="drishti 360 agri intelligence computer vision quality passport qr traceability react fastapi">
+                <div class="project-visual-header">
+                  <img src="assets/project-drishti.svg" alt="DRISHTI 360 Architecture" class="project-svg-banner" />
+                  <span class="project-domain-pill">AI &amp; COMPUTER VISION</span>
+                  <span class="project-metric-badge">QR TRACEABLE</span>
+                </div>
+                <div class="project-content-body">
+                  <h3 class="project-title">DRISHTI 360 — Farm-to-Market Agri Intelligence</h3>
+                  <div class="project-tagline">AI Visual Crop Inspection &amp; Digital Quality Passport</div>
+                  <p class="project-description">
+                    End-to-end computer vision and market compliance platform that analyzes harvest imagery, determines produce quality grades, calculates fair market pricing, and binds batches to tamper-evident QR Digital Quality Passports for supply chain traceability.
+                  </p>
+                  <div class="project-tech-badges">
+                    <span class="tech-badge">Computer Vision</span>
+                    <span class="tech-badge">FastAPI</span>
+                    <span class="tech-badge">React</span>
+                    <span class="tech-badge">QR Verification</span>
+                    <span class="tech-badge">Smart Labeling</span>
+                  </div>
+                  <div class="project-footer-actions">
+                    <a href="https://github.com/sudharshanps/Drishti-360" target="_blank" rel="noopener noreferrer" class="project-action-btn repo">
+                      <i class="bx bxl-github"></i> Repository
+                    </a>
+                    <button class="project-action-btn details open-details-btn" data-project="drishti">
+                      <i class="bx bx-detail"></i> Architecture
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 4: NidhiVizh / NIDHI SETU -->
+              <div class="project-card card-tilt" data-category="enterprise cyber" data-keywords="nidhivizh nidhi setu financial risk compliance evidence graph banking transaction trail typescript">
+                <div class="project-visual-header">
+                  <img src="assets/project-nidhivizh.svg" alt="NidhiVizh Architecture" class="project-svg-banner" />
+                  <span class="project-domain-pill">FINANCIAL RISK SAST</span>
+                  <span class="project-metric-badge">EVIDENCE GRAPH</span>
+                </div>
+                <div class="project-content-body">
+                  <h3 class="project-title">NidhiVizh (NIDHI SETU) — Financial Risk Investigation</h3>
+                  <div class="project-tagline">Beyond Alerts. Into Evidence. Regulatory Compliance Bridge</div>
+                  <p class="project-description">
+                    Evidence-driven transaction risk investigation assistant engineered for banking institutions and compliance governance. Transforms fragmented alerts into verifiable evidence graphs, reconstructs transaction trails, and automates regulatory audit packet exports.
+                  </p>
+                  <div class="project-tech-badges">
+                    <span class="tech-badge">TypeScript</span>
+                    <span class="tech-badge">React</span>
+                    <span class="tech-badge">Node.js</span>
+                    <span class="tech-badge">Graph Visuals</span>
+                    <span class="tech-badge">Risk Analytics</span>
+                  </div>
+                  <div class="project-footer-actions">
+                    <a href="https://github.com/sudharshanps/NidhiVizh" target="_blank" rel="noopener noreferrer" class="project-action-btn repo">
+                      <i class="bx bxl-github"></i> Repository
+                    </a>
+                    <button class="project-action-btn details open-details-btn" data-project="nidhivizh">
+                      <i class="bx bx-detail"></i> Architecture
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 5: Hackademia -->
+              <div class="project-card card-tilt" data-category="ai" data-keywords="hackademia exam invigilation mediapipe opencv facemesh gaze python national hackathon finalist">
+                <div class="project-visual-header">
+                  <img src="assets/project-hackademia.svg" alt="Hackademia AI Invigilation" class="project-svg-banner" />
+                  <span class="project-domain-pill">AI PROCTORING</span>
+                  <span class="project-metric-badge">TOP 50 FINALIST</span>
+                </div>
+                <div class="project-content-body">
+                  <h3 class="project-title">Hackademia — AI Online Exam Invigilation System</h3>
+                  <div class="project-tagline">National AI Hackathon Top 50 Finalist (out of 500+ teams)</div>
+                  <p class="project-description">
+                    Computer vision proctoring engine utilizing MediaPipe FaceMesh (with iris refinement) to estimate 3D head pose, track eye gaze history, detect multiple faces, and flag suspicious anomalous movements with automated security incident logging.
+                  </p>
+                  <div class="project-tech-badges">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">FastAPI</span>
+                    <span class="tech-badge">OpenCV</span>
+                    <span class="tech-badge">MediaPipe FaceMesh</span>
+                    <span class="tech-badge">Gaze Tracking</span>
+                  </div>
+                  <div class="project-footer-actions">
+                    <a href="https://github.com/sudharshanps/hackademia-ai-invigilation" target="_blank" rel="noopener noreferrer" class="project-action-btn repo">
+                      <i class="bx bxl-github"></i> Repository
+                    </a>
+                    <button class="project-action-btn details open-details-btn" data-project="hackademia">
+                      <i class="bx bx-detail"></i> Architecture
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 6: TaskGuard -->
+              <div class="project-card card-tilt" data-category="enterprise" data-keywords="taskguard spring boot java rbac jwt enterprise task management react redux">
+                <div class="project-visual-header">
+                  <img src="assets/project-taskguard.svg" alt="TaskGuard Architecture" class="project-svg-banner" />
+                  <span class="project-domain-pill">ENTERPRISE SYSTEM</span>
+                  <span class="project-metric-badge">SPRING BOOT + JWT</span>
+                </div>
+                <div class="project-content-body">
+                  <h3 class="project-title">TaskGuard — Enterprise Task Management System</h3>
+                  <div class="project-tagline">Autonomous Task Safety, RBAC &amp; Developer Workflow Watchdog</div>
+                  <p class="project-description">
+                    Full-stack enterprise project tracking architecture built on Java Spring Boot and React. Enforces stateless JWT authentication, role-based authorization guards, and auditable task lifecycle workflows.
+                  </p>
+                  <div class="project-tech-badges">
+                    <span class="tech-badge">Java</span>
+                    <span class="tech-badge">Spring Boot</span>
+                    <span class="tech-badge">Spring Security</span>
+                    <span class="tech-badge">JWT RBAC</span>
+                    <span class="tech-badge">PostgreSQL</span>
+                  </div>
+                  <div class="project-footer-actions">
+                    <a href="https://github.com/sudharshanps/TaskGuard" target="_blank" rel="noopener noreferrer" class="project-action-btn repo">
+                      <i class="bx bxl-github"></i> Repository
+                    </a>
+                    <button class="project-action-btn details open-details-btn" data-project="taskguard">
+                      <i class="bx bx-detail"></i> Architecture
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 7: CampusShield -->
+              <div class="project-card card-tilt" data-category="cyber" data-keywords="campusshield owasp security audit burp zap nmap prompt injection pentest">
+                <div class="project-visual-header">
+                  <img src="assets/project-campusshield.svg" alt="CampusShield Audit Architecture" class="project-svg-banner" />
+                  <span class="project-domain-pill">CYBERSECURITY AUDIT</span>
+                  <span class="project-metric-badge">11 OWASP VECTORS</span>
+                </div>
+                <div class="project-content-body">
+                  <h3 class="project-title">CampusShield — Web, API &amp; AI Security Audit</h3>
+                  <div class="project-tagline">11-Vector OWASP Penetration Testing &amp; Prompt Injection Matrix</div>
+                  <p class="project-description">
+                    Comprehensive defensive security assessment across educational web applications, REST APIs, and generative AI interfaces using Nmap, Burp Suite, and OWASP ZAP to identify vulnerabilities and document remediation patches.
+                  </p>
+                  <div class="project-tech-badges">
+                    <span class="tech-badge">OWASP Top 10</span>
+                    <span class="tech-badge">Burp Suite</span>
+                    <span class="tech-badge">OWASP ZAP</span>
+                    <span class="tech-badge">Nmap</span>
+                    <span class="tech-badge">Prompt Defense</span>
+                  </div>
+                  <div class="project-footer-actions">
+                    <a href="https://github.com/sudharshanps/CampusShield" target="_blank" rel="noopener noreferrer" class="project-action-btn repo">
+                      <i class="bx bxl-github"></i> Repository
+                    </a>
+                    <button class="project-action-btn details open-details-btn" data-project="campusshield">
+                      <i class="bx bx-detail"></i> Architecture
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 8: School Subject & Syllabus Management -->
+              <div class="project-card card-tilt" data-category="enterprise" data-keywords="school syllabus curriculum spring boot java mysql rest api maven">
+                <div class="project-visual-header">
+                  <img src="assets/project-taskguard.svg" alt="School Subject Management" class="project-svg-banner" />
+                  <span class="project-domain-pill">ENTERPRISE JAVA</span>
+                  <span class="project-metric-badge">REST API</span>
+                </div>
+                <div class="project-content-body">
+                  <h3 class="project-title">School Subject &amp; Syllabus Management System</h3>
+                  <div class="project-tagline">Spring Boot Academic Curriculum &amp; Instructor Scheduling Architecture</div>
+                  <p class="project-description">
+                    Enterprise Java Spring Boot platform enabling academic institutions to coordinate course syllabi, assign qualified instructors, monitor curriculum coverage milestones, and evaluate student academic progress.
+                  </p>
+                  <div class="project-tech-badges">
+                    <span class="tech-badge">Java</span>
+                    <span class="tech-badge">Spring Boot</span>
+                    <span class="tech-badge">Maven</span>
+                    <span class="tech-badge">MySQL</span>
+                    <span class="tech-badge">REST API</span>
+                  </div>
+                  <div class="project-footer-actions">
+                    <a href="https://github.com/sudharshanps/School-Subject-Syllabus-Management-System" target="_blank" rel="noopener noreferrer" class="project-action-btn repo">
+                      <i class="bx bxl-github"></i> Repository
+                    </a>
+                    <button class="project-action-btn details open-details-btn" data-project="syllabus">
+                      <i class="bx bx-detail"></i> Architecture
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 9: AI Gesture Robot Car -->
+              <div class="project-card card-tilt" data-category="iot ai" data-keywords="gesture robot car opencv mediapipe flask esp32 wifi iot robotics">
+                <div class="project-visual-header">
+                  <img src="assets/project-gesture-robot.svg" alt="AI Gesture Robot Car Architecture" class="project-svg-banner" />
+                  <span class="project-domain-pill">IOT &amp; ROBOTICS</span>
+                  <span class="project-metric-badge">ESP32 WI-FI</span>
+                </div>
+                <div class="project-content-body">
+                  <h3 class="project-title">AI Gesture-Controlled Robot Car</h3>
+                  <div class="project-tagline">Real-Time Computer Vision &amp; Wireless IoT Teleoperation</div>
+                  <p class="project-description">
+                    Hardware-software teleoperation system translating human hand gestures into wireless motor actuation. Uses OpenCV and MediaPipe for landmark tracking and a Flask REST microservice to bridge commands over local Wi-Fi to an ESP32 microcontroller.
+                  </p>
+                  <div class="project-tech-badges">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">OpenCV</span>
+                    <span class="tech-badge">MediaPipe</span>
+                    <span class="tech-badge">Flask REST</span>
+                    <span class="tech-badge">ESP32</span>
+                    <span class="tech-badge">Wi-Fi</span>
+                  </div>
+                  <div class="project-footer-actions">
+                    <a href="https://github.com/sudharshanps/gesture-robot-car" target="_blank" rel="noopener noreferrer" class="project-action-btn repo">
+                      <i class="bx bxl-github"></i> Repository
+                    </a>
+                    <button class="project-action-btn details open-details-btn" data-project="gesture">
+                      <i class="bx bx-detail"></i> Architecture
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project 10: Clinic Inventory Management System -->
+              <div class="project-card card-tilt" data-category="enterprise iot" data-keywords="clinic inventory java mysql jdbc relational schema stock tracking">
+                <div class="project-visual-header">
+                  <img src="assets/project-clinic-inventory.svg" alt="Clinic Inventory System Architecture" class="project-svg-banner" />
+                  <span class="project-domain-pill">SYSTEM ARCHITECTURE</span>
+                  <span class="project-metric-badge">3NF MYSQL SCHEMA</span>
+                </div>
+                <div class="project-content-body">
+                  <h3 class="project-title">Clinic Inventory Management System</h3>
+                  <div class="project-tagline">Java &amp; 3NF MySQL Pharmaceutical Supply Tracking</div>
+                  <p class="project-description">
+                    Clinical asset and medicine tracking desktop application engineered with Java and MySQL. Features a normalized 3NF database schema, JDBC connectivity, and stock depletion alerts to automate reordering.
+                  </p>
+                  <div class="project-tech-badges">
+                    <span class="tech-badge">Java</span>
+                    <span class="tech-badge">MySQL</span>
+                    <span class="tech-badge">JDBC</span>
+                    <span class="tech-badge">Database Design</span>
+                    <span class="tech-badge">3NF Normalization</span>
+                  </div>
+                  <div class="project-footer-actions">
+                    <a href="https://github.com/sudharshanps/clinic-inventory-system" target="_blank" rel="noopener noreferrer" class="project-action-btn repo">
+                      <i class="bx bxl-github"></i> Repository
+                    </a>
+                    <button class="project-action-btn details open-details-btn" data-project="clinic">
+                      <i class="bx bx-detail"></i> Architecture
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button class="nextprev-btn" data-turn-page="3">
+              <span>Startups &amp; Cyber Lab</span> <i class="bx bx-chevron-right"></i>
+            </button>
+            <span class="page-number">05 // PROJECTS</span>
+          </div>
+
+          <!-- BACK: Page 6 (Entrepreneurship – Turning Ideas Into Innovation) -->
+          <div class="page-back" id="pageStartups">
+            <h2 class="title"><i class="bx bx-rocket"></i> Entrepreneurship</h2>
+            <p class="section-subtitle">"Turning Ideas Into Innovation" — Strategic ventures pioneering software, security &amp; digital solutions.</p>
+
+            <p class="startup-chapter-intro">
+              Beyond engineering individual repositories, I build scalable technology ventures. Here are my two entrepreneurial brands translating digital ideas into reliable products:
+            </p>
+
+            <!-- Two-Column Startup Comparison -->
+            <div class="startup-comparison-container">
+              <!-- Startup 1: SUDHARSHANTECH -->
+              <div class="startup-card sudharshantech card-tilt">
+                <div class="startup-header-row">
+                  <img src="assets/sudharshantech-logo.jpg" alt="SudharshanTech Official Logo" class="startup-logo-img" />
+                  <div class="startup-title-block">
+                    <h3 class="startup-name">SUDHARSHAN_TECH</h3>
+                    <span class="startup-positioning">CODE. CREATE. ELEVATE.</span>
+                    <span class="startup-role-pill"><i class="bx bx-user-check"></i> Founder &amp; Lead Architect: Sudharshan P S</span>
+                  </div>
+                </div>
+
+                <p class="startup-purpose">
+                  Technology, Cybersecurity, and Software Development brand delivering production-grade digital applications, security advisories, and developer tools. Provides enterprise solutions with modern full-stack web architectures.
+                </p>
+
+                <div class="startup-status-row">
+                  <span class="startup-stage-label">Operational Stage:</span>
+                  <span class="startup-stage-value">Active Production Platform</span>
+                </div>
+
+                <div class="startup-services-tags">
+                  <span class="startup-service-tag"><i class="bx bx-check"></i> Web &amp; App Development</span>
+                  <span class="startup-service-tag"><i class="bx bx-check"></i> Cybersecurity Advisory</span>
+                  <span class="startup-service-tag"><i class="bx bx-check"></i> AI &amp; Automation Tools</span>
+                  <span class="startup-service-tag"><i class="bx bx-check"></i> Custom Software Solutions</span>
+                  <span class="startup-service-tag"><i class="bx bx-check"></i> Technical Knowledge Hub</span>
+                </div>
+
+                <div class="startup-roadmap-box">
+                  <strong>Strategic Roadmap:</strong> Expansion into automated compliance auditing microservices, specialized developer productivity SaaS, and interactive engineering education.
+                </div>
+
+                <div class="startup-cta-row">
+                  <a href="https://sudharshan-tech.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size: 0.74rem; padding: 0.35rem 0.75rem;">
+                    <i class="bx bx-globe"></i> Live Platform
+                  </a>
+                  <a href="mailto:sudharshantech123@gmail.com" class="btn btn-secondary" style="font-size: 0.74rem; padding: 0.35rem 0.75rem;">
+                    <i class="bx bx-envelope"></i> Contact Brand
+                  </a>
+                </div>
+              </div>
+
+              <!-- Startup 2: ZENTRIQ -->
+              <div class="startup-card zentriq card-tilt">
+                <div class="startup-header-row">
+                  <img src="assets/zentriq-logo.jpg" alt="Zentriq Tech Solutions Logo" class="startup-logo-img" />
+                  <div class="startup-title-block">
+                    <h3 class="startup-name">ZENTRIQ</h3>
+                    <span class="startup-positioning">TECH SOLUTIONS VENTURE</span>
+                    <span class="startup-role-pill"><i class="bx bx-user-check"></i> Co-Founder &amp; Systems Architect: Sudharshan P S</span>
+                  </div>
+                </div>
+
+                <p class="startup-purpose">
+                  Tech Solutions Venture pioneering high-throughput cloud architectures, secure distributed microservices, and AI-native enterprise system integrations. Engineered for resilient digital innovation.
+                </p>
+
+                <div class="startup-status-row">
+                  <span class="startup-stage-label">Development Stage:</span>
+                  <span class="startup-stage-value" style="color: var(--royal-blue);">Brand Architecture &amp; Core Prototyping</span>
+                </div>
+
+                <div class="startup-services-tags">
+                  <span class="startup-service-tag"><i class="bx bx-check"></i> Enterprise Cloud Architecture</span>
+                  <span class="startup-service-tag"><i class="bx bx-check"></i> AI System Integrations</span>
+                  <span class="startup-service-tag"><i class="bx bx-check"></i> Secure Microservices</span>
+                  <span class="startup-service-tag"><i class="bx bx-check"></i> High-Throughput APIs</span>
+                </div>
+
+                <div class="startup-roadmap-box" style="border-left-color: var(--royal-blue);">
+                  <strong>Strategic Roadmap:</strong> Architecting cloud-native orchestration blueprints, AI-augmented workflow accelerators, and enterprise zero-trust microservice meshes.
+                </div>
+
+                <div class="startup-cta-row">
+                  <button class="btn btn-secondary" id="zentriqDeckBtn" style="font-size: 0.74rem; padding: 0.35rem 0.75rem;">
+                    <i class="bx bx-slideshow"></i> Explore Vision Deck
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <button class="nextprev-btn back" data-turn-back="3">
+              <i class="bx bx-chevron-left"></i> <span>Featured Projects</span>
+            </button>
+            <span class="page-number">06 // STARTUPS</span>
+          </div>
+        </div>
+
+        <!-- ===================================================
+             LEAF 4: FRONT = PAGE 7 (CYBER LAB) | BACK = PAGE 8 (ACHIEVEMENTS)
+             =================================================== -->
+        <div class="book-page page-right turn" id="pageLeaf4">
+          <!-- FRONT: Page 7 (Interactive Cybersecurity Lab) -->
+          <div class="page-front" id="pageLab">
+            <h2 class="title"><i class="bx bx-shield-quarter"></i> Interactive Cyber Lab</h2>
+            <p class="section-subtitle">Safe educational cybersecurity demonstrations showcasing threat defense &amp; vulnerability awareness.</p>
+
+            <div class="cyber-lab-grid">
+              <!-- Tool 1: Password Strength & Entropy Analyzer -->
+              <div class="lab-card card-tilt">
+                <div class="lab-card-title"><i class="bx bx-key"></i> Password Strength &amp; Shannon Entropy Analyzer</div>
+                <div class="lab-card-desc">Calculates mathematical Shannon entropy (bits) and simulates GPU offline brute-force crack resistance.</div>
+                
+                <div class="lab-input-group">
+                  <input type="password" id="labPasswordInput" class="lab-input" placeholder="Type a password to test entropy..." />
+                  <i class="bx bx-show lab-input-icon" id="togglePasswordVisibility"></i>
+                </div>
+
+                <div class="entropy-meter-wrap">
+                  <div class="entropy-meter-bar">
+                    <div class="entropy-meter-fill" id="entropyMeterFill"></div>
+                  </div>
+                </div>
+
+                <div class="entropy-stats-row">
+                  <span>Entropy: <strong class="entropy-val" id="entropyVal">0 bits</strong></span>
+                  <span>Est. Crack Time: <strong class="crack-time-val" id="crackTimeVal">Instant</strong></span>
+                  <span id="strengthText">Score: None</span>
+                </div>
+              </div>
+
+              <!-- Tool 2: Phishing Email Awareness Simulator -->
+              <div class="lab-card card-tilt">
+                <div class="lab-card-title"><i class="bx bx-envelope-open"></i> Phishing Awareness Simulator</div>
+                <div class="lab-card-desc">Analyze suspicious incoming communications. Click "Inspect Red Flags" to highlight social engineering vectors.</div>
+                
+                <div class="phishing-email-preview" id="phishingEmailBox">
+                  <div class="phishing-email-header">
+                    <div><strong>From:</strong> <span class="flag-target" data-flag="Spoofed Domain: Notice 'paypa1' uses digit '1' instead of letter 'l'">Security Alert &lt;service@paypa1-security.com&gt;</span></div>
+                    <div><strong>Subject:</strong> <span class="flag-target" data-flag="Urgency Trigger: Attackers manufacture artificial crisis to bypass critical thinking">URGENT: Immediate Account Suspension within 2 Hours!</span></div>
+                  </div>
+                  <p style="margin-bottom: 0.4rem;">
+                    <span class="flag-target" data-flag="Generic Greeting: Legitimate services greet verified users by their registered name">Dear Valued Customer,</span> We detected unauthorized login attempts on your institutional portal.
+                  </p>
+                  <p style="margin-bottom: 0.4rem;">
+                    Please <span class="flag-target" data-flag="Malicious Deceptive Hyperlink: Links to an untrusted .tk domain rather than official portal">click here to verify your credentials</span> immediately.
+                  </p>
+                  <p style="font-size: 0.68rem; color: var(--text-muted);">
+                    Attached: <span class="flag-target" data-flag="Executable Masquerading as Document: Double extension .pdf.exe indicates trojan dropper">Account_Verification.pdf.exe</span>
+                  </p>
+                </div>
+
+                <div style="display: flex; gap: 0.5rem; align-items: center;">
+                  <button class="btn btn-secondary" id="inspectFlagsBtn" style="font-size: 0.72rem; padding: 0.35rem 0.65rem;">
+                    <i class="bx bx-search-alt"></i> <span id="flagBtnText">Inspect Red Flags</span>
+                  </button>
+                  <span id="flagCountText" style="font-size: 0.7rem; color: var(--deep-blue); font-family: var(--font-mono); font-weight: 700;"></span>
+                </div>
+              </div>
+
+              <!-- Tool 3: Safe Client-Side URL Analyzer -->
+              <div class="lab-card card-tilt">
+                <div class="lab-card-title"><i class="bx bx-link"></i> Safe Client-Side URL Heuristic Inspector</div>
+                <div class="lab-card-desc">Evaluates URLs for protocol security, raw IP hosts, suspicious TLDs, and high-risk keywords.</div>
+
+                <div class="lab-input-group">
+                  <input type="text" id="urlInput" class="lab-input" placeholder="e.g. http://login.verify-skcet-secure.tk/auth" />
+                </div>
+
+                <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
+                  <button class="btn btn-secondary" id="sampleUrlSafe" style="font-size: 0.68rem; padding: 0.2rem 0.5rem;">Sample: Safe SKCET</button>
+                  <button class="btn btn-secondary" id="sampleUrlPhish" style="font-size: 0.68rem; padding: 0.2rem 0.5rem;">Sample: Suspicious TLD</button>
+                  <button class="btn btn-secondary" id="sampleUrlIp" style="font-size: 0.68rem; padding: 0.2rem 0.5rem;">Sample: Raw IP Host</button>
+                </div>
+
+                <div class="url-analyzer-results" id="urlResults" style="display: none;">
+                  <div class="url-verdict" id="urlVerdict">SAFE</div>
+                  <div id="urlBreakdown" style="color: var(--text-secondary); line-height: 1.4;"></div>
+                </div>
+              </div>
+
+              <!-- OWASP Top 10 Learning Matrix -->
+              <div class="lab-card card-tilt">
+                <div class="lab-card-title"><i class="bx bx-list-check"></i> OWASP Top 10 Defensive Matrix</div>
+                <div class="owasp-grid">
+                  <div class="owasp-card">
+                    <span class="owasp-code">A01:2021</span>
+                    <div class="owasp-name">Broken Access Control</div>
+                  </div>
+                  <div class="owasp-card">
+                    <span class="owasp-code">A02:2021</span>
+                    <div class="owasp-name">Cryptographic Failures</div>
+                  </div>
+                  <div class="owasp-card">
+                    <span class="owasp-code">A03:2021</span>
+                    <div class="owasp-name">Injection (SQL/Command/Prompt)</div>
+                  </div>
+                  <div class="owasp-card">
+                    <span class="owasp-code">A05:2021</span>
+                    <div class="owasp-name">Security Misconfiguration</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button class="nextprev-btn" data-turn-page="4">
+              <span>Achievements &amp; Awards</span> <i class="bx bx-chevron-right"></i>
+            </button>
+            <span class="page-number">07 // CYBER LAB</span>
+          </div>
+
+          <!-- BACK: Page 8 (Achievements & Recognition Gallery) -->
+          <div class="page-back" id="pageAchievements">
+            <h2 class="title"><i class="bx bx-trophy"></i> Honors &amp; Recognition</h2>
+            <p class="section-subtitle">Verified hackathon awards, academic distinctions, and accredited credentials.</p>
+
+            <div class="achievements-grid">
+              <!-- Achievement 1 -->
+              <div class="achievement-card card-tilt">
+                <div class="achievement-trophy-icon"><i class="bx bx-medal"></i></div>
+                <div class="achievement-info">
+                  <h3 class="achievement-title">National AI Hackathon — Top 50 Finalist</h3>
+                  <span class="achievement-badge-pill">Selected out of 500+ Competing Teams</span>
+                  <p class="achievement-desc">
+                    Recognized nationally for <strong>Hackademia</strong>, an intelligent computer-vision exam invigilation system employing facial landmark mesh tracking and temporal gaze analysis.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Achievement 2 -->
+              <div class="achievement-card card-tilt">
+                <div class="achievement-trophy-icon"><i class="bx bx-award"></i></div>
+                <div class="achievement-info">
+                  <h3 class="achievement-title">YUGAM — Tex-Research Hackathon</h3>
+                  <span class="achievement-badge-pill">2nd Runner-Up Position</span>
+                  <p class="achievement-desc">
+                    Awarded 2nd Runner-Up for innovative technical engineering, cross-domain architecture, and rigorous prototyping defense under timed competitive conditions.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Achievement 3 -->
+              <div class="achievement-card card-tilt">
+                <div class="achievement-trophy-icon"><i class="bx bx-shield"></i></div>
+                <div class="achievement-info">
+                  <h3 class="achievement-title">Cybersecurity Club — SKCET</h3>
+                  <span class="achievement-badge-pill">Active Contributor &amp; Event Organizer</span>
+                  <p class="achievement-desc">
+                    Core member organizing capture-the-flag competitions, hands-on vulnerability assessments, and security awareness seminars for aspiring student researchers.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Achievement 4 -->
+              <div class="achievement-card card-tilt">
+                <div class="achievement-trophy-icon"><i class="bx bx-user-voice"></i></div>
+                <div class="achievement-info">
+                  <h3 class="achievement-title">Technical Peer Mentor</h3>
+                  <span class="achievement-badge-pill">Algorithm &amp; System Mentorship</span>
+                  <p class="achievement-desc">
+                    Conducted peer-learning sessions mentoring students in foundational data structures, object-oriented principles, and secure software development practices.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Verified Certifications -->
+            <div class="certifications-section">
+              <div class="certifications-title"><i class="bx bx-certification"></i> Verified Certifications &amp; Simulations</div>
+              <div class="cert-cards-list">
+                <div class="cert-card card-tilt">
+                  <div>
+                    <div class="cert-name">Prompt Engineering for Developers</div>
+                    <div class="cert-issuer">Vanderbilt University</div>
+                  </div>
+                  <span class="cert-verified-badge">VERIFIED</span>
+                </div>
+                <div class="cert-card card-tilt">
+                  <div>
+                    <div class="cert-name">Cybersecurity Threat Vectors</div>
+                    <div class="cert-issuer">Microsoft</div>
+                  </div>
+                  <span class="cert-verified-badge">VERIFIED</span>
+                </div>
+                <div class="cert-card card-tilt">
+                  <div>
+                    <div class="cert-name">Introduction to AI</div>
+                    <div class="cert-issuer">Google</div>
+                  </div>
+                  <span class="cert-verified-badge">VERIFIED</span>
+                </div>
+                <div class="cert-card card-tilt">
+                  <div>
+                    <div class="cert-name">Tata Cybersecurity Analyst Job Simulation</div>
+                    <div class="cert-issuer">Forage</div>
+                  </div>
+                  <span class="cert-verified-badge">VERIFIED</span>
+                </div>
+                <div class="cert-card card-tilt">
+                  <div>
+                    <div class="cert-name">Lloyds Banking Group UX Design Job Simulation</div>
+                    <div class="cert-issuer">Forage</div>
+                  </div>
+                  <span class="cert-verified-badge">VERIFIED</span>
+                </div>
+              </div>
+            </div>
+
+            <button class="nextprev-btn back" data-turn-back="4">
+              <i class="bx bx-chevron-left"></i> <span>Startups &amp; Lab</span>
+            </button>
+            <span class="page-number">08 // RECOGNITION</span>
+          </div>
+        </div>
+
+        <!-- ===================================================
+             LEAF 5: FRONT = PAGE 9 (CONTACT) | BACK = PAGE 10 (SYSTEM COLOPHON)
+             =================================================== -->
+        <div class="book-page page-right turn" id="pageLeaf5">
+          <!-- FRONT: Page 9 (Contact Experience) -->
+          <div class="page-front" id="pageContact">
+            <h2 class="title"><i class="bx bx-envelope"></i> Let's Connect</h2>
+            <p class="section-subtitle">"Let's Build Something Amazing Together." Open for software engineering internships, cybersecurity opportunities, and technical collaborations.</p>
+
+            <!-- Contact Cards -->
+            <div class="contact-grid">
+              <div class="contact-card card-tilt">
+                <div class="contact-card-icon"><i class="bx bx-mail-send"></i></div>
+                <div class="contact-card-content">
+                  <span class="contact-card-label">Primary Email</span>
+                  <a href="mailto:sudharshanthemagnet@gmail.com" class="contact-card-val" id="emailVal">sudharshanthemagnet@gmail.com</a>
+                </div>
+                <button class="copy-email-btn" id="copyEmailBtn" title="Copy email address">
+                  <i class="bx bx-copy"></i>
+                </button>
+              </div>
+
+              <div class="contact-card card-tilt">
+                <div class="contact-card-icon"><i class="bx bx-phone-call"></i></div>
+                <div class="contact-card-content">
+                  <span class="contact-card-label">Direct Phone</span>
+                  <a href="tel:+919791495418" class="contact-card-val">+91 9791495418</a>
+                </div>
+              </div>
+
+              <div class="contact-card card-tilt">
+                <div class="contact-card-icon"><i class="bx bx-map-pin"></i></div>
+                <div class="contact-card-content">
+                  <span class="contact-card-label">Location</span>
+                  <span class="contact-card-val">Coimbatore, Tamil Nadu, India</span>
+                </div>
+              </div>
+
+              <div class="contact-card card-tilt">
+                <div class="contact-card-icon"><i class="bx bxl-linkedin"></i></div>
+                <div class="contact-card-content">
+                  <span class="contact-card-label">LinkedIn</span>
+                  <a href="https://linkedin.com/in/sudharshan-ps-5a6b9a325" target="_blank" rel="noopener noreferrer" class="contact-card-val">sudharshan-ps</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Direct Contact Form -->
+            <div class="contact-form-wrap">
+              <form id="contactForm">
+                <div class="form-group">
+                  <input type="text" id="contactName" class="form-input" placeholder="Your Name or Organization" required />
+                </div>
+                <div class="form-group">
+                  <input type="email" id="contactEmail" class="form-input" placeholder="Your Email Address" required />
+                </div>
+                <div class="form-group">
+                  <input type="text" id="contactSubject" class="form-input" placeholder="Subject / Opportunity Title" required />
+                </div>
+                <div class="form-group">
+                  <textarea id="contactMessage" class="form-input" placeholder="Your message, project proposal, or inquiry details..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                  <i class="bx bx-send"></i> Send Message
+                </button>
+              </form>
+              <div id="contactFeedback" style="display: none; margin-top: 0.65rem; font-size: 0.74rem; color: var(--security-emerald);"></div>
+            </div>
+
+            <!-- Quick Triggers -->
+            <div class="contact-quick-triggers">
+              <button class="btn btn-secondary" id="contactTerminalTrigger" style="font-size: 0.72rem; flex: 1;">
+                <i class="bx bx-terminal"></i> Open Terminal
+              </button>
+              <button class="btn btn-secondary" id="contactAiTrigger" style="font-size: 0.72rem; flex: 1;">
+                <i class="bx bx-bot"></i> Launch AI Assistant
+              </button>
+            </div>
+
+            <button class="nextprev-btn" data-turn-page="5">
+              <span>System Colophon</span> <i class="bx bx-chevron-right"></i>
+            </button>
+            <span class="page-number">09 // CONTACT</span>
+          </div>
+
+          <!-- BACK: Page 10 (System Specifications & Colophon) -->
+          <div class="page-back" id="pageColophon">
+            <h2 class="title"><i class="bx bx-cog"></i> System Colophon</h2>
+            <p class="section-subtitle">Architectural specifications, performance benchmarks, and codex telemetry.</p>
+
+            <div class="colophon-specs-box card-tilt">
+              <div class="colophon-title"><i class="bx bx-chip"></i> Engineering Specifications</div>
+              <ul class="colophon-list">
+                <li><span class="key">Rendering Pipeline:</span> <span class="val">Pure Vanilla CSS 3D Matrix &amp; ES6</span></li>
+                <li><span class="key">Motion Synthesis:</span> <span class="val">HTML5 2D Particle Canvas &amp; Web Audio API</span></li>
+                <li><span class="key">Audio Engine:</span> <span class="val">Biquad Filtered Procedural Sound Synth</span></li>
+                <li><span class="key">Typography:</span> <span class="val">Inter, Nunito &amp; Fira Code (Google Fonts)</span></li>
+                <li><span class="key">Performance Metric:</span> <span class="val">Zero Heavy External Bloatware (Sub-50ms FLIP)</span></li>
+                <li><span class="key">Security Standard:</span> <span class="val">CSP Strict &amp; Client-Side Sandbox Only</span></li>
+              </ul>
+            </div>
+
+            <div class="colophon-title" style="margin-bottom: 0.4rem;"><i class="bx bx-keyboard"></i> Keyboard Shortcuts</div>
+            <table class="shortcuts-table">
+              <tr>
+                <td><span class="kbd">← / →</span></td>
+                <td>Flip Book Pages Prev / Next</td>
+              </tr>
+              <tr>
+                <td><span class="kbd">~ / `</span></td>
+                <td>Toggle Interactive Developer Terminal</td>
+              </tr>
+              <tr>
+                <td><span class="kbd">Esc</span></td>
+                <td>Close Any Open Modal or Drawer</td>
+              </tr>
+            </table>
+
+            <div style="display: flex; gap: 0.6rem; margin-top: 0.6rem;">
+              <a href="Sudharshan_PS_Resume.pdf" download="Sudharshan_PS_Resume.pdf" class="btn btn-primary" style="flex: 1; font-size: 0.76rem;">
+                <i class="bx bx-download"></i> Download ATS Resume (PDF)
+              </a>
+              <button class="btn btn-secondary" id="backToStartBtn" style="font-size: 0.76rem;">
+                <i class="bx bx-rewind"></i> Back to Start
+              </button>
+            </div>
+
+            <button class="nextprev-btn back" data-turn-back="5">
+              <i class="bx bx-chevron-left"></i> <span>Contact Experience</span>
+            </button>
+            <span class="page-number">10 // COLOPHON</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Floating Bottom Navigation HUD -->
+    <aside class="book-hud-bar" id="bookHudBar" aria-label="Book Navigation HUD">
+      <button class="hud-btn hud-cover-btn" id="hudCoverBtn" title="Return to Cover / Start">
+        <i class="bx bx-book-bookmark"></i>
+      </button>
+
+      <button class="hud-btn hud-prev" id="hudPrevBtn" title="Previous Page (Left Arrow)">
+        <i class="bx bx-chevron-left"></i>
+      </button>
+
+      <button class="hud-btn hud-toc-trigger" id="hudTocBtn" title="Open Table of Contents">
+        <i class="bx bx-list-ul"></i>
+        <span class="hud-toc-label">Contents</span>
+      </button>
+
+      <div class="hud-page-indicator" id="hudPageIndicator" title="Click to view Table of Contents">
+        <span class="hud-page-chip" id="hudPageNum">Spread 0 / 5</span>
+        <span class="hud-chapter-title" id="hudChapterTitle">Profile &amp; About</span>
+      </div>
+
+      <button class="hud-btn hud-next" id="hudNextBtn" title="Next Page (Right Arrow)">
+        <i class="bx bx-chevron-right"></i>
+      </button>
+    </aside>
+
+    <!-- Table of Contents (TOC) Modal Overlay -->
+    <div class="toc-overlay" id="tocOverlay" aria-modal="true" role="dialog">
+      <div class="toc-modal">
+        <div class="toc-header">
+          <div class="toc-title-row">
+            <i class="bx bx-book-open"></i>
+            <div>
+              <h3 class="toc-title">TABLE OF CONTENTS</h3>
+              <p class="toc-subtitle">Interactive Digital Codex &bull; Sudharshan P S</p>
+            </div>
+          </div>
+          <button class="toc-close-btn" id="tocCloseBtn" aria-label="Close Table of Contents">&times;</button>
+        </div>
+
+        <div class="toc-items-list" id="tocItemsList">
+          <div class="toc-item active" data-spread="0">
+            <span class="toc-ch-num">00</span>
+            <div class="toc-ch-body">
+              <div class="toc-ch-top">
+                <span class="toc-ch-title">Author Profile &amp; About Me</span>
+                <span class="toc-page-badge">Page 00 - 01</span>
+              </div>
+              <p class="toc-ch-desc">Personal Branding, Cyber Defense &amp; AI Engineering Core</p>
+            </div>
+            <i class="bx bx-chevron-right toc-ch-arrow"></i>
+          </div>
+
+          <div class="toc-item" data-spread="1">
+            <span class="toc-ch-num">01</span>
+            <div class="toc-ch-body">
+              <div class="toc-ch-top">
+                <span class="toc-ch-title">Education &amp; Experience Timeline</span>
+                <span class="toc-page-badge">Page 02 - 03</span>
+              </div>
+              <p class="toc-ch-desc">SKCET Cyber Security, 4 Engineering Internships &amp; Professional Milestones</p>
+            </div>
+            <i class="bx bx-chevron-right toc-ch-arrow"></i>
+          </div>
+
+          <div class="toc-item" data-spread="2">
+            <span class="toc-ch-num">02</span>
+            <div class="toc-ch-body">
+              <div class="toc-ch-top">
+                <span class="toc-ch-title">Core Competencies &amp; Featured Projects</span>
+                <span class="toc-page-badge">Page 04 - 05</span>
+              </div>
+              <p class="toc-ch-desc">10 Production Systems: CredSense AI, Drishti 360, NidhiVizh, TaskGuard &amp; More</p>
+            </div>
+            <i class="bx bx-chevron-right toc-ch-arrow"></i>
+          </div>
+
+          <div class="toc-item" data-spread="3">
+            <span class="toc-ch-num">03</span>
+            <div class="toc-ch-body">
+              <div class="toc-ch-top">
+                <span class="toc-ch-title">Entrepreneurship &amp; Cyber Defense Lab</span>
+                <span class="toc-page-badge">Page 06 - 07</span>
+              </div>
+              <p class="toc-ch-desc">SUDHARSHAN_TECH, ZENTRIQ Ventures &amp; Educational Threat Sandbox</p>
+            </div>
+            <i class="bx bx-chevron-right toc-ch-arrow"></i>
+          </div>
+
+          <div class="toc-item" data-spread="4">
+            <span class="toc-ch-num">04</span>
+            <div class="toc-ch-body">
+              <div class="toc-ch-top">
+                <span class="toc-ch-title">Honors, Certifications &amp; Contact Hub</span>
+                <span class="toc-page-badge">Page 08 - 09</span>
+              </div>
+              <p class="toc-ch-desc">National Hackathon Wins, Global Credentials &amp; Live Contact Form</p>
+            </div>
+            <i class="bx bx-chevron-right toc-ch-arrow"></i>
+          </div>
+
+          <div class="toc-item" data-spread="5">
+            <span class="toc-ch-num">05</span>
+            <div class="toc-ch-body">
+              <div class="toc-ch-top">
+                <span class="toc-ch-title">System Architecture &amp; Colophon</span>
+                <span class="toc-page-badge">Page 10</span>
+              </div>
+              <p class="toc-ch-desc">3D Physics Specs, Audio Synthesis, Telemetry &amp; Full-Stack Specs</p>
+            </div>
+            <i class="bx bx-chevron-right toc-ch-arrow"></i>
+          </div>
+        </div>
+
+        <div class="toc-footer">
+          <div class="toc-tip">
+            <i class="bx bx-bulb"></i> Tip: Use keyboard arrow keys <kbd>&larr;</kbd> <kbd>&rarr;</kbd> or touch swipe to flip pages anytime.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================================================
+         GLOBAL MODAL 1: PROJECT ARCHITECTURE CASE STUDY
+         =================================================== -->
+    <div class="modal-overlay" id="projectModal">
+      <div class="modal-container">
+        <button class="modal-close-btn" id="modalCloseBtn">&times;</button>
+        <h3 class="modal-title" id="modalTitle">Project Title</h3>
+        <p class="modal-tagline" id="modalTagline">Tagline</p>
+
+        <div class="modal-section">
+          <h4 class="modal-section-title"><i class="bx bx-target-lock"></i> Problem Statement</h4>
+          <p class="modal-section-text" id="modalProblem">Problem statement description...</p>
+        </div>
+
+        <div class="modal-section">
+          <h4 class="modal-section-title"><i class="bx bx-layer"></i> Architectural Solution</h4>
+          <p class="modal-section-text" id="modalSolution">Architectural solution description...</p>
+        </div>
+
+        <div class="modal-section">
+          <h4 class="modal-section-title"><i class="bx bx-shield-check"></i> Security &amp; Engineering Standards</h4>
+          <p class="modal-section-text" id="modalSecurity">Security safeguards...</p>
+        </div>
+
+        <div class="modal-section">
+          <h4 class="modal-section-title"><i class="bx bx-code-alt"></i> Technology Stack</h4>
+          <p class="modal-section-text" id="modalTechStack">Tech stack list...</p>
+        </div>
+
+        <div class="modal-actions" id="modalActions">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================================================
+         GLOBAL MODAL 2: INTERACTIVE DEVELOPER TERMINAL
+         =================================================== -->
+    <div class="terminal-modal-overlay" id="terminalModal">
+      <div class="terminal-window">
+        <div class="terminal-header">
+          <div class="terminal-controls">
+            <span class="term-dot red" id="termCloseDot" title="Close Terminal"></span>
+            <span class="term-dot yellow" id="termMinDot" title="Clear Terminal"></span>
+            <span class="term-dot green" id="termHelpDot" title="Show Help"></span>
+          </div>
+          <div class="terminal-title">sudharshan@cyber-codex:~ (bash)</div>
+          <div style="font-family: var(--font-mono); font-size: 0.68rem; color: var(--text-muted);">v3.0.4</div>
+        </div>
+
+        <div class="terminal-body" id="terminalBody">
+          <div style="color: var(--royal-blue); font-weight: 700; margin-bottom: 0.5rem;">
+            ╔════════════════════════════════════════════════════════════╗<br>
+            ║ &nbsp;SUDHARSHAN P S — CYBER CODEX TERMINAL v4.0 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ║<br>
+            ║ &nbsp;Type 'help' to inspect available system commands. &nbsp; &nbsp; &nbsp; &nbsp; ║<br>
+            ╚════════════════════════════════════════════════════════════╝
+          </div>
+          <div style="color: var(--secondary-text); margin-bottom: 0.5rem;">
+            System initialized. 10 featured projects, 4 internships, and 2 startup ventures indexed.
+          </div>
+        </div>
+
+        <div class="terminal-input-bar">
+          <span class="terminal-prompt-label">sudharshan@codex:~$</span>
+          <input type="text" id="terminalInput" class="terminal-input-field" autocomplete="off" spellcheck="false" placeholder="Type a command (help, about, skills, projects, startups, lab, contact, clear)..." />
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================================================
+         GLOBAL MODAL 3: PERSONAL AI ASSISTANT (SUDHARSHAN.AI)
+         =================================================== -->
+    <div class="ai-modal-overlay" id="aiAssistantModal">
+      <div class="ai-chat-window">
+        <div class="ai-chat-header">
+          <div class="ai-chat-brand">
+            <div class="ai-avatar-icon"><i class="bx bx-bot"></i></div>
+            <div>
+              <div class="ai-brand-text">SUDHARSHAN.AI</div>
+              <div class="ai-status-tag"><i class="bx bxs-circle" style="font-size: 0.5rem;"></i> KNOWLEDGE ENGINE ONLINE</div>
+            </div>
+          </div>
+          <button class="modal-close-btn" id="aiCloseBtn" style="position: static; width: 28px; height: 28px;">&times;</button>
+        </div>
+
+        <div class="ai-chat-body" id="aiChatBody">
+          <div class="ai-msg">
+            <div class="ai-avatar-icon" style="width: 26px; height: 26px; font-size: 0.9rem; flex-shrink: 0;"><i class="bx bx-bot"></i></div>
+            <div class="ai-msg-bubble">
+              Hello! I'm <strong>SUDHARSHAN.AI</strong>, the portfolio assistant for Sudharshan P S. Ask me anything about his projects, cybersecurity expertise, startup ventures (SudharshanTech &amp; Zentriq), or academic qualifications!
+            </div>
+          </div>
+        </div>
+
+        <div class="ai-quick-prompts-bar">
+          <button class="ai-prompt-chip" data-prompt="Who is Sudharshan?">Who is Sudharshan?</button>
+          <button class="ai-prompt-chip" data-prompt="Tell me about his startups">Startups (SudharshanTech &amp; Zentriq)</button>
+          <button class="ai-prompt-chip" data-prompt="What are his key projects?">Key Projects</button>
+          <button class="ai-prompt-chip" data-prompt="What are his cybersecurity skills?">Cybersecurity Skills</button>
+          <button class="ai-prompt-chip" data-prompt="How can I contact him?">Contact Details</button>
+          <button class="ai-prompt-chip" data-prompt="Where can I download his resume?">Download Resume</button>
+        </div>
+
+        <div class="ai-chat-input-bar">
+          <input type="text" id="aiInputField" class="ai-input-field" placeholder="Ask about Sudharshan's skills, experience, or ventures..." />
+          <button class="ai-send-btn" id="aiSendBtn"><i class="bx bx-send"></i></button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Main JavaScript with Cache Buster -->
+    <script src="script.js?v=4.0"></script>
+  </body>
+</html>

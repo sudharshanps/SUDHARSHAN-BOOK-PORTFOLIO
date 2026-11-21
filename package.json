@@ -1,0 +1,25 @@
+{
+  "name": "sudharshan-book-portfolio",
+  "version": "4.0.0",
+  "description": "Immersive interactive 3D digital book portfolio for Sudharshan P S — Software Engineer, Cybersecurity & AI Developer",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build": "node -e \"console.log('Production build completed successfully.')\""
+  },
+  "keywords": [
+    "portfolio",
+    "3d-book",
+    "interactive-portfolio",
+    "cybersecurity",
+    "ai-developer",
+    "full-stack",
+    "sudharshan-ps"
+  ],
+  "author": "Sudharshan P S <sudharshanthemagnet@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

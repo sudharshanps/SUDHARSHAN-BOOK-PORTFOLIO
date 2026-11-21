@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="favGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00abf0"/>
+      <stop offset="100%" stop-color="#0284c7"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#0f172a"/>
+  <rect x="2" y="2" width="60" height="60" rx="12" fill="none" stroke="url(#favGrad)" stroke-width="2"/>
+  <path d="M 32 10 L 48 18 V 32 C 48 42 32 52 32 52 C 32 52 16 42 16 32 V 18 Z" fill="url(#favGrad)" opacity="0.25"/>
+  <path d="M 32 10 L 48 18 V 32 C 48 42 32 52 32 52 C 32 52 16 42 16 32 V 18 Z" fill="none" stroke="#00abf0" stroke-width="2"/>
+  <text x="32" y="37" fill="#ffffff" font-family="'Inter', -apple-system, sans-serif" font-weight="800" font-size="16" text-anchor="middle">S</text>
+</svg>
