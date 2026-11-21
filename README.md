@@ -20,7 +20,14 @@
 
 <p align="center">
   <a href="https://github.com/sudharshanps">GitHub Profile</a> •
-  <a href="https://github.com/sudharshanps/SUDHARSHAN-BOOK-PORTFOLIO">Repository</a>
+  <a href="https://github.com/sudharshanps/SUDHARSHAN-BOOK-PORTFOLIO">Repository</a> •
+  <a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsudharshanps%2FSUDHARSHAN-BOOK-PORTFOLIO">Deploy on Vercel</a>
+</p>
+
+<p align="center">
+  <a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsudharshanps%2FSUDHARSHAN-BOOK-PORTFOLIO"><img src="https://vercel.com/button" alt="Deploy with Vercel"/></a>
+  &nbsp;
+  <a href="https://render.com/deploy?repo=https://github.com/sudharshanps/SUDHARSHAN-BOOK-PORTFOLIO"><img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render"/></a>
 </p>
 
 ---
