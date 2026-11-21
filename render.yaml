@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: sudharshan-book-portfolio
+    runtime: node
+    plan: free
+    branch: main
+    buildCommand: npm run build
+    startCommand: node server.js
+    envVars:
+      - key: NODE_VERSION
+        value: 20
